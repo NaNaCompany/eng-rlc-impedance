@@ -1,0 +1,69 @@
+{
+  "id": "E083",
+  "slug": "eng-rlc-impedance",
+  "title": "직렬 RLC 임피던스 계산기",
+  "title_en": "Series RLC Impedance Calculator",
+  "category": "전기",
+  "category_en": "Electrical engineering",
+  "fields": [
+    {
+      "key": "r",
+      "label": "직렬 저항 R",
+      "label_en": "Series resistance R",
+      "dimension": "resistance",
+      "example": 10,
+      "constraint": "nonnegative",
+      "display_unit": "ohm",
+      "display_value": "10"
+    },
+    {
+      "key": "l",
+      "label": "인덕턴스 L",
+      "label_en": "Inductance L",
+      "dimension": "inductance",
+      "example": 0.01,
+      "constraint": "positive",
+      "display_unit": "mH",
+      "display_value": "10"
+    },
+    {
+      "key": "c",
+      "label": "정전용량 C",
+      "label_en": "Capacitance C",
+      "dimension": "capacitance",
+      "example": 0.0001,
+      "constraint": "positive",
+      "display_unit": "uF",
+      "display_value": "100"
+    },
+    {
+      "key": "freq",
+      "label": "정현파 주파수 f",
+      "label_en": "Sinusoidal frequency f",
+      "dimension": "frequency",
+      "example": 50,
+      "constraint": "positive",
+      "display_unit": "Hz",
+      "display_value": "50"
+    }
+  ],
+  "result_label": "임피던스 크기 |Z|",
+  "result_label_en": "Impedance magnitude |Z|",
+  "result_dimension": "resistance",
+  "formula": "|Z| = √(R²+(2πfL−1/(2πfC))²)",
+  "purpose": "이상 직렬 RLC 회로의 정현파 임피던스 크기 계산",
+  "purpose_en": "Calculate sinusoidal impedance magnitude of an ideal series RLC circuit.",
+  "assumptions": "R≥0, L,C,f>0. 이상 소자의 직렬·정현파 정상상태 모델이다. 출력은 복소수 위상이 아닌 크기 하나다. 기생성분·포화·비선형은 제외한다.",
+  "assumptions_en": "Required: R≥0, L,C,f>0 and ideal series elements in sinusoidal steady state. Only impedance magnitude is returned. Parasitics, saturation and nonlinearity are excluded.",
+  "sources": [
+    {
+      "label": "OpenStax · 15 3 rlc series circuits with ac",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/15-3-rlc-series-circuits-with-ac"
+    }
+  ],
+  "condition": "",
+  "condition_en": "",
+  "site": "https://nanalab.kr/eng-rlc-impedance/",
+  "repository": "https://github.com/NaNaCompany/eng-rlc-impedance",
+  "output_unit": "ohm"
+}
